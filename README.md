@@ -2,11 +2,11 @@
 Bungaloo is home rental API. Use it to create and manage a listing of homes for rent.
 
 ## What can it do?
-1. Create a home listing: <http://127.0.0.1:8000/homes/create>
-1. Retrieve a list of all home listings: <http://127.0.0.1:8000/homes/>
-1. Retrieve a home listing: <http://127.0.0.1:8000/homes/ID>
-1. Update a home listing: <http://127.0.0.1:8000/homes/ID>
-1. Delete a home listing: <http://127.0.0.1:8000/homes/ID>
+1. Create a home listing: <http://localhost:8000/homes/create>
+1. Retrieve a list of all home listings: <http://localhost:8000/homes/>
+1. Retrieve a home listing: <http://localhost:8000/homes/ID>
+1. Update a home listing: <http://localhost:8000/homes/ID>
+1. Delete a home listing: <http://localhost:8000/homes/ID>
 1. Import home data from a CSV file
 
 ### Environment
@@ -48,3 +48,58 @@ Bungaloo currently has no tests. However, if it were to have test, you can run t
 1. `pipenv shell`
 1. `cd bungaloo/`
 1. `python manage.py test`
+
+### Posting data
+Bungaloo accepts the following fields:
+```
+    area_unit = string
+    bathrooms = string
+    bedrooms = integer
+    home_size = integer
+    home_type = string
+    last_sold_date = date (yyyy-mm-dd)
+    last_sold_price = integer
+    link = url
+    price = string
+    property_size = integer
+    rent_price = string
+    rentzestimate_amount = integer
+    rentzestimate_last_updated = date (yyyy-mm-dd)
+    tax_value = float
+    tax_year = integer
+    year_built = integer
+    zestimate_amount = integer
+    zestimate_last_updated = date (yyyy-mm-dd)
+    zillow_id = integer
+    address = string
+    city = string
+    state = string
+    zipcode = integer
+```
+You can send a post request to `http://localhost:8000/homes/create` with the following body:
+```
+{
+    "area_unit": "",
+    "bathrooms": "",
+    "bedrooms": null,
+    "home_size": null,
+    "last_sold_date": null,
+    "last_sold_price": null,
+    "link": "",
+    "price": "",
+    "property_size": null,
+    "rent_price": "",
+    "rentzestimate_amount": null,
+    "rentzestimate_last_updated": null,
+    "tax_value": null,
+    "tax_year": null,
+    "year_built": null,
+    "zestimate_amount": null,
+    "zestimate_last_updated": null,
+    "zillow_id": null,
+    "address": "",
+    "city": "",
+    "state": "",
+    "zipcode": null
+}
+```
