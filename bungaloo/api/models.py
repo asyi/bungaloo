@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Home(models.Model):
     area_unit = models.CharField(blank=True, max_length=200)
     bathrooms = models.CharField(blank=True, max_length=200, default='')
@@ -25,3 +24,7 @@ class Home(models.Model):
     city = models.CharField(blank=True, max_length=200)
     state = models.CharField(blank=True, max_length=2)
     zipcode = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        """Return a human readable rep of the model instance"""
+        return "{}".format(self)

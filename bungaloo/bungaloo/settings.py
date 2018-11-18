@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd^08ylw5@g6dvmvv@k%tmwx$#4-)(jzm-7ozf3&q^g7x-f3=_v'
+SECRET_KEY = 'cmcc-bb3aeg_=8s0lr^wn-rwv!&(y7(s6&q+!2vi1n+=awres!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages.apps.PagesConfig' # new
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -119,7 +120,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-# Changes date format to %m/%d/%Y
-DATE_INPUT_FORMATS = ['%m/%d/%Y']
