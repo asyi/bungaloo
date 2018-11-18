@@ -9,8 +9,15 @@ Bungaloo is home rental API. Use it to create and manage a listing of homes for 
 1. Delete a home listing: <http://127.0.0.1:8000/homes/ID>
 1. Import home data from a CSV file
 
+### Environment
+1. Bungaloo is built with Python3
+1. It also uses Pipenv: <https://pipenv.readthedocs.io/en/latest/>
+
 ### Installation guide
 1. `git clone git@github.com:asyi/bungaloo.git`
+1. `cd bungaloo/`
+1. `pipenv install django==2.1.3`
+1. `pipenv install djangorestframework`
 
 ### How to run migrations
 1. `pipenv shell`
